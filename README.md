@@ -114,25 +114,39 @@ Durante la implementación se enfrentaron y resolvieron desafíos clave:
 
 🗂️ Estructura del Proyecto
 
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/5b636319-5b61-45ce-85df-e7c0a6d30fdc" />
+<img width="329" height="323" alt="image" src="https://github.com/user-attachments/assets/1c3cb501-ddbb-4423-bd2b-48f5c6d2bd9a" />
+
 
  
 
-Detalles clave por carpeta
+📁 Estructura del Proyecto ForoHub
+Este proyecto está organizado siguiendo buenas prácticas de arquitectura limpia en Java con Spring Boot. A continuación se detallan los módulos clave:
 
-1 - controller/: Contiene clases como TopicoController, AuthController, etc., que exponen los endpoints.
+Carpeta / Paquete	Descripción
 
-2 - dto/: Modelos como LoginRequest, TopicoResponse, usados para definir payloads limpios.
+1 - controller	Controladores REST que manejan las solicitudes HTTP. Incluye lógica de entrada y mapeo de rutas. Ej: TopicoController, AutenticacionController.
 
-3 - model/: Define entidades JPA como Topico, Usuario, Respuesta, incluyendo relaciones.
+2 - domain	Contiene las entidades del modelo de negocio, como Curso, organizadas en subpaquetes temáticos.
 
-4 - repository/: Interfaces como TopicoRepository, usan Spring Data JPA.
+3 - dto	Objetos de transferencia de datos (DTOs) usados para encapsular y validar información entre capas. Ej: DatosRegistroTopico, DatosDetalleTopico.
 
-5 - service/: Lógica como AuthService, TopicoService, encapsula reglas de negocio.
+4 - respuestas	Maneja las entidades y DTOs relacionados con respuestas de foro (Respuesta, DatosRespuestaListado).
 
-6 - security/: JWTFilter, configuración de SecurityConfig, manejo de roles y autenticación.
+5 - topico	Contiene la entidad Topico, que representa los temas tratados en el foro.
 
-7 - config/: SwaggerConfig, CorsConfig, entre otros para personalización del comportamiento.
+6 - usuario	Define el modelo y comportamiento de los usuarios del sistema (Usuario).
+
+7 - infra	Infraestructura técnica: configuración, seguridad y manejo de errores. Subdividida en:<br>• errores: gestión de excepciones.<br>• security: JWT, filtros y servicios de autenticación.<br>• springdoc: configuración de Swagger/OpenAPI.
+
+8-  repository	Interfaces JPA para acceso a datos. Facilita operaciones CRUD sobre entidades (TopicoRepository, UsuarioRepository, etc.).
+
+
+resources	Archivos de configuración como application.properties o plantillas.
+
+test	Código de prueba para garantizar la calidad y estabilidad del backend.
+
+ForoHubApplication.java	Clase principal que arranca la aplicación Spring Boot. Punto de entrada.
+
 
 🧠 Conclusión
 Este proyecto representa más que una API funcional: es un ejercicio riguroso de arquitectura segura, documentación profesional y autenticación robusta con JWT. 
