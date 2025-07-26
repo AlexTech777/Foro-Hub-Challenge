@@ -69,11 +69,8 @@ Características clave:
 Ejemplo de conexión:
 
 properties
-spring.datasource.url=jdbc:mysql://localhost:3306/forohub
-spring.datasource.username=root
-spring.datasource.password=tu_contraseña
-spring.jpa.hibernate.ddl-auto=none
-spring.flyway.enabled=true
+<img width="535" height="119" alt="image" src="https://github.com/user-attachments/assets/fbadf9ea-30e8-4438-86a1-89e9322ad080" />
+
 
 📸 Capturas Interfaz Insomnia con token insertado y pruebas
 
