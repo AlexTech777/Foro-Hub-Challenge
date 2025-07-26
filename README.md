@@ -69,6 +69,7 @@ Características clave:
 Ejemplo de conexión:
 
 properties
+
 <img width="535" height="119" alt="image" src="https://github.com/user-attachments/assets/fbadf9ea-30e8-4438-86a1-89e9322ad080" />
 
 
