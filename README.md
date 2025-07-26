@@ -56,6 +56,25 @@ Para garantizar la seguridad y robustez, se recomienda realizar las siguientes p
 * - Swagger/OpenAPI para documentación técnica
 * - Maven como gestor de dependencias
 
+🗄️ Base de Datos
+La API utiliza MySQL como sistema de almacenamiento relacional. Se eligió por su robustez, compatibilidad con JPA/Hibernate y facilidad de integración con Spring Boot.
+
+Características clave:
+* -✅ Motor: MySQL Server
+* -🗂️ Persistencia gestionada con JPA/Hibernate
+* -🚀 Migraciones controladas con Flyway (src/main/resources/db/migration)
+* -🔐 Integridad referencial y validación por esquema SQL
+* -⚙️ Conexión configurada vía application.properties
+
+Ejemplo de conexión:
+
+properties
+spring.datasource.url=jdbc:mysql://localhost:3306/forohub
+spring.datasource.username=root
+spring.datasource.password=tu_contraseña
+spring.jpa.hibernate.ddl-auto=none
+spring.flyway.enabled=true
+
 📸 Capturas Interfaz Insomnia con token insertado y pruebas
 
 Flujo de login y respuesta JWT
